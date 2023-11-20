@@ -1,0 +1,13 @@
+import adafruit_dht
+import time
+import request
+//insert write api key
+url='https://api.thinkspeak.com/update?api-key=Writeapikey&field2='
+sensor= adafruit_dht.dht11
+dhtpin=4
+while true:
+	hum,temp=adafruit.read(sensor,dhtpin)
+	newurl=url+str(temp)+'field3='+str(hum)
+	r=request.get(newurl)
+	print(r)
+	time.sleep(3)

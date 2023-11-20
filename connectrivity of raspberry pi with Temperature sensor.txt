@@ -1,0 +1,11 @@
+import Adafruit_DHT
+import time
+DHT_SENSOR=Adafruit_DHT.DHT11
+DHT_PIN=4
+while true:
+	humidity, temperature =adafruit.read(DHT_SENSOR, DHT_PIN)
+	if humidity is not None and temperature is not None:
+		print("temp={0:0.1f}C humidity{ 1:0.1f}%".format(temperature,humidity))
+	else:
+		print("sensor Failure check wiring and connections")
+	time.sleep(3);

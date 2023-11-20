@@ -1,0 +1,14 @@
+//sudo apt-get install Python-Picamera
+//sudo rasp-config
+//interface option yes 
+// camera yes 
+//reboot yes 
+  
+import picamera
+//property 
+width=800
+height=600
+camera=picamera.Picamera()
+camera.resolution =(width,height)
+filename='mypic.jpg'
+camera.capture(filename)
